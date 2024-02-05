@@ -11,7 +11,7 @@ pipeline {
       agent {
         docker {
             image 'oxsecurity/megalinter:v7'
-            args "-u root -e VALIDATE_ALL_CODEBASE=true -v ${WORKSPACE}:/tmp/lint --entrypoint=''"
+            args "-u root -e VALIDATE_ALL_CODEBASE=true -v \${WORKSPACE}:/tmp/lint --entrypoint=''"
             reuseNode true
         }
       }
