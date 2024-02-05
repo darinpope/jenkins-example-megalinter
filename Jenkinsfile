@@ -5,16 +5,10 @@ pipeline {
     DISABLE_ERRORS=true
   }
   stages {
-    stage('env') {
-      agent any
-      steps {
-        sh 'env | sort'
-      }
-    }
     stage('MegaLinter') {
       agent {
         docker {
-            image 'oxsecurity/megalinter-cupcake:v7.8.0'
+            image 'oxsecurity/megalinter:v7'
             args "-u root -e VALIDATE_ALL_CODEBASE=true -v \${WORKSPACE}:/tmp/lint --entrypoint=''"
             reuseNode true
         }
