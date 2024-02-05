@@ -16,7 +16,7 @@ pipeline {
         }
       }
       steps {
-        sh './entrypoint.sh'
+        sh '/entrypoint.sh'
       }
       post {
         always {
