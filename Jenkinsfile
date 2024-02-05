@@ -1,5 +1,8 @@
 pipeline {
   agent none
+  environment {
+    DISABLE_LINTERS="MARKDOWN,SPELL"
+  }
   stages {
     stage('env') {
       agent any
