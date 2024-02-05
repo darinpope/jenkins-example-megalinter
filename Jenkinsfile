@@ -1,10 +1,10 @@
 pipeline {
   agent none
   stages {
-    stage('checkout') {
+    stage('env') {
       agent any
       steps {
-        checkout scm
+        sh 'env | sort'
       }
     }
     stage('MegaLinter') {
