@@ -1,9 +1,5 @@
 pipeline {
   agent none
-  environment {
-    DISABLE="MARKDOWN,SPELL"
-    DISABLE_ERRORS=true
-  }
   stages {
     stage('MegaLinter') {
       agent {
