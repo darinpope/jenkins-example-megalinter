@@ -10,7 +10,7 @@ pipeline {
     stage('MegaLinter') {
       agent {
         docker {
-            image 'oxsecurity/megalinter:v7'
+            image 'oxsecurity/megalinter-java:v7'
             args "-u root -e VALIDATE_ALL_CODEBASE=true -v \${WORKSPACE}:/tmp/lint --entrypoint=''"
             reuseNode true
         }
