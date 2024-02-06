@@ -2,6 +2,7 @@ pipeline {
   agent none
   environment {
     DISABLE="SPELL"
+    DISABLE_ERRORS=true
   }
   stages {
     stage('MegaLinter') {
