@@ -1,5 +1,8 @@
 pipeline {
   agent none
+  environment {
+    DISABLE="SPELL"
+  }
   stages {
     stage('MegaLinter') {
       agent {
